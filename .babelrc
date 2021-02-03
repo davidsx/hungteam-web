@@ -1,0 +1,17 @@
+{
+    "presets": ["next/babel"],
+    "plugins": [
+        "@babel/plugin-transform-arrow-functions",
+        [
+            "module-resolver",
+            {
+                // "root": ["./"],
+                "alias": {
+                    "@src": "./src"
+                    // "@components": "./src/components",
+                    // "@assets": "./src/assets"
+                }
+            }
+        ]
+    ]
+}

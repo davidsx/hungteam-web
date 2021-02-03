@@ -1,0 +1,14 @@
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+}

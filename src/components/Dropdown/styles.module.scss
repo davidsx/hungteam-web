@@ -1,0 +1,59 @@
+.container {
+    position: relative;
+    display: inline-block;
+    margin-right: $padding-size;
+
+    .title {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+
+    .content {
+        @extend .flex-row-center-center;
+        width: 100%;
+        font-size: 0.8rem;
+        font-family: inherit;
+        padding: $padding-size / 2 $padding-size;
+        background-color: $grey-background;
+        border-radius: $padding-size / 2;
+
+        .selectedOption {
+            width: 100%;
+            text-align: center;
+            padding-left: $padding-size;
+            padding-right: $padding-size;
+        }
+    }
+
+    .optionContainer {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin-top: -$padding-size / 2;
+        display: none;
+        padding: $padding-size / 2 $padding-size;
+        background-color: $grey-background;
+        border-bottom-left-radius: $padding-size / 2;
+        border-bottom-right-radius: $padding-size / 2;
+
+        .option {
+            width: 100%;
+            text-align: center;
+            line-height: 1rem;
+            padding: $padding-size / 2 0;
+            font-size: 0.8rem;
+            font-family: inherit;
+            display: block;
+        }
+    }
+
+    &.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        .optionContainer {
+            display: block;
+        }
+    }
+}

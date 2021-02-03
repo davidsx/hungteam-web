@@ -1,0 +1,65 @@
+$property: 'm' 'margin', 'p' 'padding';
+$sides: 't' 'top', 'b' 'bottom', 'l' 'left', 'r' 'right', 'x' 'horizontal', 'y' 'vertical', '' 'all';
+$sizes: '0' 0, '1' 2vh, '2' 4vh, '3' 6vh, '4' 8vh, '5' 10vh;
+@each $prop-name, $prop in $property {
+    @each $side-name, $side in $sides {
+        @each $size-name, $size in $sizes {
+            .#{$prop-name}#{$side-name}-#{$size-name} {
+                @if $side == 'horizontal' {
+                    #{$prop}-left: $size;
+                    #{$prop}-right: $size;
+                } @else if $side == 'vertical' {
+                    #{$prop}-top: $size;
+                    #{$prop}-bottom: $size;
+                } @else if $side == 'all' {
+                    #{$prop}: $size;
+                } @else {
+                    #{$prop}-#{$side}: $size;
+                }
+            }
+        }
+    }
+}
+
+.section {
+    height: calc(100vh - #{$navbar-height});
+    width: 100vw;
+}
+
+.section-fluid {
+    width: 100vw;
+}
+
+.responsive-container {
+    @include respond-to(xs) {
+        width: 550px;
+    }
+
+    @include respond-to(sm) {
+        width: 750px;
+    }
+
+    @include respond-to(md) {
+        width: 970px;
+    }
+
+    @include respond-to(lg) {
+        width: 1150px;
+    }
+}
+
+$flex-direction: 'column' column, 'row' row;
+$flex-align: 'start' flex-start, 'center' center, 'end' flex-end;
+$flex-justify: 'start' flex-start, 'center' center, 'end' flex-end;
+@each $direction-name, $direction in $flex-direction {
+    @each $align-name, $align in $flex-align {
+        @each $justify-name, $justify in $flex-justify {
+            .flex-#{$direction-name}-#{$align-name}-#{$justify-name} {
+                display: flex;
+                flex-direction: $direction;
+                align-items: $align;
+                justify-content: $justify;
+            }
+        }
+    }
+}

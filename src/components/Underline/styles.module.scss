@@ -1,0 +1,11 @@
+.underline {
+    display: inline-block;
+    height: 5px;
+    width: 60px;
+    background-color: $theme-color;
+    margin: 3vh 0;
+
+    &.dark {
+        background-color: $theme-color-dark;
+    }
+}

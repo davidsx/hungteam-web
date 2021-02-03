@@ -1,0 +1,41 @@
+.container {
+    padding: 0 15px;
+
+    @include respond-to(xs) {
+        width: 550px;
+    }
+
+    @include respond-to(sm) {
+        width: 750px;
+    }
+
+    @include respond-to(md) {
+        width: 970px;
+    }
+
+    @include respond-to(lg) {
+        width: 1150px;
+    }
+
+    $prefixes: 'xs' xs, 'sm' sm, 'md' md, 'lg' lg;
+    $suffixes: '1' 1, '2' 2, '3' 3, '4' 4, '5' 5, '6' 6, '7' 7, '8' 8, '9' 9, '10' 10, '11' 11, '12' 12;
+    @each $prefix, $prefix-value in $prefixes {
+        @each $suffix, $suffix-value in $suffixes {
+            &.#{$prefix}-#{$suffix} {
+                @include respond-to($prefix-value) {
+                    width: $suffix-value / 12 * 100%;
+                }
+            }
+        }
+    }
+
+    // ${(props) => props.xs && respondTo.xs`width: ${(props.xs / 12) * 100 + '%;'}`}
+    // ${(props) =>
+    //   props.sm && respondTo.sm`width: ${(props.sm / 12) * 100 + '%;'}`}
+    // ${(
+    //   props
+    // ) => props.md && respondTo.md`width: ${(props.md / 12) * 100 + '%;'}`}
+    // ${(
+    //   props
+    // ) => props.lg && respondTo.lg`width: ${(props.lg / 12) * 100 + '%;'}`}
+}

@@ -1,0 +1,45 @@
+.container {
+    color: white;
+    background-color: $theme-color-dark;
+    font-size: 0.8rem;
+    padding-top: 60px;
+    @extend .flex-column-center-center;
+
+    & p {
+        line-height: 1.5rem;
+    }
+
+    .content {
+        @extend .responsive-container;
+        @extend .flex-row-start-center;
+        padding-bottom: 20px;
+
+        .detail {
+            @extend .flex-column-start-start;
+            flex: 1;
+            padding: 0 15px;
+
+            .socialMedia {
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .contactInfo {
+                align-items: center;
+                justify-content: center;
+                display: grid;
+                grid-template-columns: 1fr 10fr;
+                grid-auto-rows: 15px;
+                grid-gap: 20px 5px;
+                height: 30%;
+                width: auto;
+            }
+        }
+    }
+
+    .footer {
+        height: 70px;
+        @extend .flex-row-center-center;
+    }
+}

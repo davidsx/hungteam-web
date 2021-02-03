@@ -1,0 +1,93 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        'intro job1 job2' 'intro job1 job2' 'intro job3 job4' 'intro job3 job4'
+        'intro quotation contact ';
+
+    .intro {
+        @extend .flex-column-start-center;
+        grid-area: intro;
+        background-color: $theme-color-dark;
+        padding: 0 10%;
+        color: white;
+
+        p {
+            padding-top: 3vh;
+        }
+    }
+
+    .job {
+        &.image-1 {
+            grid-area: job1;
+        }
+        &.image-2 {
+            grid-area: job2;
+        }
+        &.image-3 {
+            grid-area: job3;
+        }
+        &.image-4 {
+            grid-area: job4;
+        }
+
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .imageContainer {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .background, .jobName {
+            @extend .flex-column-center-center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 0.6s;
+        }
+
+        .background {
+            background-color: $theme-color-dark;
+        }
+
+        .jobName {
+            background-color: transparent;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Rubik', Arial, Helvetica, sans-serif;
+        }
+
+        &:hover .background {
+            opacity: 0.6;
+        }
+
+        &:hover .jobName {
+            opacity: 1;
+        }
+    }
+
+    .quotation {
+        @extend .flex-column-start-center;
+        grid-area: quotation;
+        padding-left: 60px;
+        background-color: $theme-color;
+    }
+
+    .contact {
+        @extend .flex-column-center-center;
+        grid-area: contact;
+        background-color: white;
+    }
+}

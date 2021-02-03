@@ -1,0 +1,16 @@
+.container {
+    @extend .section-fluid;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    @extend .flex-column-center-center;
+
+    .content {
+        @extend .responsive-container;
+        @extend .flex-row-center-center;
+
+        .service {
+            @extend .flex-column-center-center;
+            text-align: center;
+        }
+    }
+}

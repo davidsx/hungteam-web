@@ -1,0 +1,27 @@
+$icons: '1x' 6vh 3vh, '2x' 8vh 4vh, '3x' 10vh 5vh;
+@each $name, $size, $icon in $icons {
+    .icon-#{$name} {
+        height: $size;
+        width: $size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+            font-size: $icon;
+            transition: 0.5s ease-in-out;
+        }
+
+        &:hover svg {
+            color: $theme-color;
+        }
+    }
+}
+
+.icon {
+    color: white;
+
+    &.dark {
+        color: $theme-color-dark;
+    }
+}

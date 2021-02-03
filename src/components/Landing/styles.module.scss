@@ -1,0 +1,34 @@
+.container {
+    @extend .flex-column-center-center;
+    @extend .section;
+    margin-top: $navbar-height;
+    padding: 20px;
+
+    .content {
+        @extend .responsive-container;
+        @extend .flex-row-center-center;
+        z-index: 1000;
+        color: white;
+    }
+
+    .heading {
+        flex: 6;
+        @extend .flex-column-center-center;
+        text-align: center;
+    }
+
+    .form {
+        flex: 4;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 80%;
+        // height: 60%;
+        background-color: rgba(0, 0, 0, 0.35);
+
+        & input:first-of-type {
+            margin-top: 40px;
+        }
+    }
+}

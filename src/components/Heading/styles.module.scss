@@ -1,0 +1,32 @@
+$fontSizes: 'xs' 1.5rem, 'sm' 2rem, 'md' 2.5rem, 'lg' 3rem, 'xl' 3.5rem;
+@each $name, $fs in $fontSizes {
+    .#{$name} {
+        font-size: $fs;
+    }
+}
+
+.heading {
+    padding: 15px 0;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    display: block;
+    z-index: 1000;
+    // padding-top: 20px;
+    // padding-bottom: 20px;
+
+    &.normal {
+        font-family: 'QuickSand', Arial, Helvetica, sans-serif;
+    }
+
+    &.white {
+        color: white;
+    }
+
+    &.thin {
+        font-weight: 300;
+    }
+
+    &.inline {
+        display: inline-block;
+    }
+}
