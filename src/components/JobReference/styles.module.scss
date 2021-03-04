@@ -3,20 +3,18 @@
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas:
-        'intro job1 job2' 'intro job1 job2' 'intro job3 job4' 'intro job3 job4'
-        'intro quotation contact ';
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'intro job1 job2' 'intro job3 job4' ;
 
     .intro {
         @extend .flex-column-start-center;
         grid-area: intro;
-        background-color: $theme-color-dark;
+        background-color: $primary-color-dark;
         padding: 0 10%;
         color: white;
 
         p {
-            padding-top: 3vh;
+            padding: 3vh 0;
         }
     }
 
@@ -46,7 +44,8 @@
             width: 100%;
         }
 
-        .background, .jobName {
+        .background,
+        .jobName {
             @extend .flex-column-center-center;
             position: absolute;
             height: 100%;
@@ -58,7 +57,7 @@
         }
 
         .background {
-            background-color: $theme-color-dark;
+            background-color: $primary-color-dark;
         }
 
         .jobName {
@@ -82,7 +81,7 @@
         @extend .flex-column-start-center;
         grid-area: quotation;
         padding-left: 60px;
-        background-color: $theme-color;
+        background-color: $primary-color;
     }
 
     .contact {

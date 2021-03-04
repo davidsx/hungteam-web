@@ -13,7 +13,7 @@ $icons: '1x' 6vh 3vh, '2x' 8vh 4vh, '3x' 10vh 5vh;
         }
 
         &:hover svg {
-            color: $theme-color;
+            color: $primary-color;
         }
     }
 }
@@ -22,6 +22,6 @@ $icons: '1x' 6vh 3vh, '2x' 8vh 4vh, '3x' 10vh 5vh;
     color: white;
 
     &.dark {
-        color: $theme-color-dark;
+        color: $primary-color-dark;
     }
 }

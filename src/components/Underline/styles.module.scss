@@ -2,10 +2,10 @@
     display: inline-block;
     height: 5px;
     width: 60px;
-    background-color: $theme-color;
+    background-color: $primary-color;
     margin: 3vh 0;
 
     &.dark {
-        background-color: $theme-color-dark;
+        background-color: $primary-color-dark;
     }
 }

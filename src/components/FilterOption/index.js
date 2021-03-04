@@ -1,8 +1,9 @@
-import React, { useRef, useCallback, useState } from 'react';
-import styles from './styles.module.scss';
+import React, { useCallback, useState } from 'react';
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
+import styles from './styles.module.scss';
 
 const FilterOption = (props) => {
     const { title, options, defaultActive, onChange } = props;
@@ -18,7 +19,7 @@ const FilterOption = (props) => {
             <div className={styles.title}>
                 <button onClick={onCLick}>
                     <span>{title}</span>
-                    <FontAwesomeIcon icon={active ? faAngleUp : faAngleDown} size="sm" />
+                    <FontAwesomeIcon icon={active ? faMinus : faPlus} className={styles.icon} />
                 </button>
             </div>
             <div

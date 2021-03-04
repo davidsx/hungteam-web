@@ -12,5 +12,4 @@ module.exports = {
     sassOptions: {
         additionalData: `@import '${utils}';`,
     },
-    // generateBuildId: async () => process.env.LATEST_COMMIT_HASH || 'test_build_id',
 };

@@ -13,7 +13,7 @@ body {
     font-family: 'QuickSand', Arial, Helvetica, sans-serif;
     font-weight: 300;
     min-width: 1000px;
-    background-color: #f1f2f8;
+    // background-color: #f1f2f8;
     /* background-color: white; */
 }
 
@@ -22,29 +22,4 @@ button {
     outline: none;
     border: none;
     background-color: transparent;
-}
-
-input[type='text'],
-textarea {
-    font-family: 'QuickSand', Arial, Helvetica, sans-serif;
-    appearance: none;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    text-align: left;
-    font-size: 1rem;
-    height: 50px;
-    width: 100%;
-    padding: 0 20px;
-    margin-bottom: 10px;
-    line-height: 50px;
-}
-
-input {
-    height: 50px;
-}
-
-textarea {
-    height: 100px;
-    resize: none;
 }

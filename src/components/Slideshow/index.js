@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import styles from './styles.module.scss';
-import classNames from 'classnames';
+import React, { useEffect, useState } from 'react';
+
 import Image from 'next/image';
-import { Sliders } from '@src/config/images';
+import { Sliders } from 'src/config/images';
+import classNames from 'classnames';
+import styles from './styles.module.scss';
 
 const SlideShow = () => {
     const [photoIndex, setPhotoIndex] = useState(0);

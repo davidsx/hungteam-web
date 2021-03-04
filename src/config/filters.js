@@ -12,21 +12,22 @@ module.exports = [
     //         { key: 'HT', label: 'HUNG TEAM' },
     //     ],
     // },
-    {
-        title: 'Type',
-        options: [
-            { key: 'AP', label: 'ACCESS PANEL' },
-            { key: 'MP', label: 'MULTI PANEL' },
-            { key: 'TP', label: 'TRAP DOOR' },
-            { key: 'WD', label: 'WINDOW' },
-            { key: 'DR', label: 'DOOR' },
-            { key: 'CD', label: 'COMPOSITE DOOR / STEEL DOOR' },
-            { key: 'SD', label: 'SLIDING DOOR' },
-            { key: 'GD', label: 'GLASS DOOR' },
-            { key: 'TD', label: 'TIMBER DOOR' },
-            { key: 'XD', label: 'EXTRA LARGE DOOR' },
-        ],
-    },
+    // {
+    //     title: 'Type',
+    //     options: [
+    //         { key: 'AP', label: 'ACCESS PANEL' },
+    //         { key: 'MP', label: 'MULTI PANEL' },
+    //         { key: 'TP', label: 'TRAP DOOR' },
+    //         { key: 'WD', label: 'WINDOW' },
+    //         { key: 'DR', label: 'DOOR' },
+    //         { key: 'CD', label: 'COMPOSITE DOOR' },
+    //         { key: 'SD', label: 'STEEL DOOR' },
+    //         { key: 'SD', label: 'SLIDING DOOR' },
+    //         { key: 'GD', label: 'GLASS DOOR' },
+    //         { key: 'TD', label: 'TIMBER DOOR' },
+    //         { key: 'XD', label: 'EXTRA LARGE DOOR' },
+    //     ],
+    // },
     // {
     //     title: 'FRR	',
     //     options: [
@@ -69,6 +70,24 @@ module.exports = [
             { key: 'ACL', label: 'ARCHITECTURAL CLADDING' },
             { key: 'DST', label: 'DURASTEEL' },
             { key: 'TMB', label: 'TIMBER' },
+        ],
+    },
+    {
+        title: 'Insulation',
+        options: [
+            { key: 30, label: '30 Mins' },
+            { key: 60, label: '1 Hrs' },
+            { key: 120, label: '2 Hrs' },
+            { key: 240, label: '4 Hrs' },
+        ],
+    },
+    {
+        title: 'Integrity',
+        options: [
+            { key: 30, label: '30 Mins' },
+            { key: 60, label: '1 Hrs' },
+            { key: 120, label: '2 Hrs' },
+            { key: 240, label: '4 Hrs' },
         ],
     },
 ];

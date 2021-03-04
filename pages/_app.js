@@ -1,15 +1,15 @@
-import '@src/theme/styles.global.scss';
-import NavBar from '../src/components/Navbar';
-import Footer from '../src/components/Footer';
+import 'src/theme/styles.global.scss';
 
-const App = ({ Component, pageProps }) => {
-    return (
-        <>
-            <NavBar />
-            <Component {...pageProps} />
-            <Footer />
-        </>
-    );
-}
+import Footer from 'src/components/Footer';
+import NavBar from 'src/components/Navbar';
+import React from 'react';
+
+const App = ({ Component, pageProps }) => (
+    <>
+        {/* <NavBar /> */}
+        <Component {...pageProps} />
+        {/* <Footer /> */}
+    </>
+);
 
 export default App;

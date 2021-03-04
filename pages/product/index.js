@@ -1,16 +1,15 @@
-// import Landing from '@src/components/Landing';
-import React, { useState, useCallback } from 'react';
-import FilterOption from '@src/components/FilterOption';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown, faFire } from '@fortawesome/free-solid-svg-icons';
+// import Landing from 'src/components/Landing';
+import React, { useCallback, useState } from 'react';
+import { faBars, faThLarge } from '@fortawesome/free-solid-svg-icons';
+
+import Button from 'src/components/Button';
+import FilterOption from 'src/components/FilterOption';
+import Image from 'next/image';
+import { Jobs } from 'src/config/images';
+import Logo from 'src/components/Logo';
+import RouteLink from 'src/components/RouteLink';
+import filters from 'src/config/filters';
 import styles from './styles.module.scss';
-import filters from '@src/config/filters';
-import ProductBox from '@src/components/ProductBox';
-import { Jobs } from '@src/config/images';
-import Dropdown from '@src/components/Dropdown';
-import Checkbox from '@src/components/Checkbox';
-import CheckboxList from '@src/components/CheckboxList';
-import Button from '@src/components/Button';
 
 const Product = () => {
     // const { title, options, defaultActive } = props;
@@ -20,72 +19,44 @@ const Product = () => {
     const onCLick = useCallback(() => {
         setActive((prev) => !prev);
     }, [setActive]);
-    
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                {/* <Dropdown
-                        title="Insulation"
-                        prefixIcon={faFire}
-                        defaultKey={30}
-                        options={[
-                            { key: 30, value: '30 Mins' },
-                            { key: 60, value: '1 Hrs' },
-                            { key: 120, value: '2 Hrs' },
-                            { key: 240, value: '4 Hrs' },
-                        ]}
-                    />
-                    <Dropdown
-                        title="Integrity"
-                        prefixIcon={faFire}
-                        defaultKey={30}
-                        options={[
-                            { key: 30, value: '30 Mins' },
-                            { key: 60, value: '1 Hrs' },
-                            { key: 120, value: '2 Hrs' },
-                            { key: 240, value: '4 Hrs' },
-                        ]}
-                    /> */}
-                {/* <br /> */}
-                <CheckboxList
-                    title="Insulation"
-                    options={[
-                        { key: 30, label: '30 Mins' },
-                        { key: 60, label: '1 Hrs' },
-                        { key: 120, label: '2 Hrs' },
-                        { key: 240, label: '4 Hrs' },
-                    ]}
-                />
-                <CheckboxList
-                    title="Integrity"
-                    options={[
-                        { key: 30, label: '30 Mins' },
-                        { key: 60, label: '1 Hrs' },
-                        { key: 120, label: '2 Hrs' },
-                        { key: 240, label: '4 Hrs' },
-                    ]}
-                />
-                {/* {filters.map((filter) => (
-                        <CheckboxList
-                            key={filter.title}
-                            options={filter.options}
-                            title={filter.title}
-                        />
-                    ))} */}
+                <RouteLink link="/" className={styles.logo}>
+                    <Logo />
+                </RouteLink>
+                <ul className={styles.type}>
+                    {[
+                        { key: 'AP', label: 'ACCESS PANEL' },
+                        { key: 'MP', label: 'MULTI PANEL' },
+                        { key: 'TP', label: 'TRAP DOOR' },
+                        { key: 'WD', label: 'WINDOW' },
+                        { key: 'DR', label: 'DOOR' },
+                        { key: 'CD', label: 'COMPOSITE DOOR' },
+                        { key: 'SD', label: 'SLIDING DOOR' },
+                        { key: 'GD', label: 'GLASS DOOR' },
+                        { key: 'TD', label: 'TIMBER DOOR' },
+                        { key: 'XD', label: 'EXTRA LARGE DOOR' },
+                    ].map((type) => (
+                        <li key={type.key}>
+                            <RouteLink link={`/product?type=${type.key}`} className={styles.link}>
+                                {type.label}
+                            </RouteLink>
+                        </li>
+                    ))}
+                </ul>
             </div>
-            {/* <div className={styles.filter}>
-                    <button onClick={onCLick}>
-                        <span>Filters</span>
-                        <div className={styles.horizontalLine} />
-                        <FontAwesomeIcon icon={active ? faAngleUp : faAngleDown} size="lg" />
-                    </button>
-                </div> */}
-            <div className={styles.banner}>Visit out latest product !</div>
+            <div className={styles.banner}>
+                <span>Need something more?</span>
+                <Button normal dark>
+                    Ask for product
+                </Button>
+            </div>
             <div className={styles.content}>
                 <div className={styles.sidebar}>
-                    <Button normal style={{ marginBottom: '5px' }}>
-                        Ask for product
-                    </Button>
+                    {/* <div className={styles.header}>Visit out latest product !</div> */}
+                    <div className={styles.filtering}>Filtering</div>
                     {filters.map((filter) => (
                         <FilterOption
                             key={filter.title}
@@ -96,17 +67,47 @@ const Product = () => {
                     ))}
                 </div>
                 <div className={styles.main}>
-                    {Jobs.map((j, i) => (
-                        <ProductBox
-                            key={i}
-                            img={j}
-                            id="MX-AP-020-PH-FRP-01"
-                            name="MX-AP-020-PH-FRP-01"
-                            detail="Ex amet ullamco labore laborum laboris minim nulla."
-                        />
+                    {/* <div className={styles.header}>
+                        <FontAwesomeIcon icon={faBars} className={styles.menu} />
+                        <FontAwesomeIcon icon={faThLarge} className={styles.menu} />
+                    </div> */}
+                    {Jobs.map((img, i) => (
+                        <div key={i} className={styles.product}>
+                            <div className={styles.image}>
+                                <Image
+                                    src={img}
+                                    alt={'MX-AP-020-PH-FRP-01'}
+                                    // width={280}
+                                    // height={220}
+                                    // objectFit="cover"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                            </div>
+                            <div className={styles.content}>
+                                <div className={styles.name}>{'MX-AP-020-PH-FRP-01'}</div>
+                                <div className={styles.description}>
+                                    {'Ex amet ullamco labore laborum laboris minim nulla.'}
+                                </div>
+                                <div className={styles.detail}>
+                                    <div>Insulation</div>
+                                    <li>30mins</li>
+                                    <li>1hrs</li>
+                                    <li>2hrs</li>
+                                    <li>4hrs</li>
+                                </div>
+                                <div className={styles.detail}>
+                                    <div>Integrity</div>
+                                    <li>30mins</li>
+                                    <li>1hrs</li>
+                                    <li>2hrs</li>
+                                    <li>4hrs</li>
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
-                <div className={styles.other}>others</div>
+                <div className={styles.other}></div>
             </div>
         </div>
     );

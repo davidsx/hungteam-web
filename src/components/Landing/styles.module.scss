@@ -1,7 +1,7 @@
 .container {
     @extend .flex-column-center-center;
     @extend .section;
-    margin-top: $navbar-height;
+    margin-top: 60px;
     padding: 20px;
 
     .content {
@@ -20,15 +20,24 @@
     .form {
         flex: 4;
         padding-top: 20px;
-        display: flex;
-        flex-direction: column;
         padding: 20px;
         width: 80%;
-        // height: 60%;
-        background-color: rgba(0, 0, 0, 0.35);
 
-        & input:first-of-type {
-            margin-top: 40px;
+        .row {
+            display: flex;
+            margin-bottom: 16px;
+
+            & > * {
+                margin: 0 8px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
 }

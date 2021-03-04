@@ -1,11 +1,11 @@
-import React from 'react';
-import Underline from '../Underline';
-import styles from './styles.module.scss';
-import { Jobs } from '@src/config/images';
-import Button from '../Button';
-import Heading from '../Heading';
-import classNames from 'classnames';
+import Button from 'src/components/Button';
+import Heading from 'src/components/Heading';
 import Image from 'next/image';
+import { Jobs } from 'src/config/images';
+import React from 'react';
+import Underline from 'src/components/Underline';
+import classNames from 'classnames';
+import styles from './styles.module.scss';
 
 const JobReference = () => {
     const jobNames = ['Job1', 'Job2', 'Job3', 'Job4'];
@@ -20,6 +20,7 @@ const JobReference = () => {
                     Deserunt labore non aliqua quis sunt. Non deserunt et eu duis. Sunt exercitation
                     irure ex nostrud sint.
                 </p>
+                <Button>Contact Now</Button>
             </div>
             {Jobs.map((j, i) => (
                 <div className={classNames(styles.job, styles[`image-${i + 1}`])} key={i}>
@@ -30,7 +31,7 @@ const JobReference = () => {
                     <div className={styles.jobName}>{jobNames[i]}</div>
                 </div>
             ))}
-            <div className={styles.quotation}>
+            {/* <div className={styles.quotation}>
                 <Heading size="xs" thin>
                     Asking for quotation?
                 </Heading>
@@ -38,7 +39,7 @@ const JobReference = () => {
             </div>
             <div className={styles.contact}>
                 <Button>Contact Now</Button>
-            </div>
+            </div> */}
         </div>
     );
 };

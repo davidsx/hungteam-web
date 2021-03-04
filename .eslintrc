@@ -69,6 +69,38 @@
         "react/prefer-stateless-function": 0,
         "react/no-array-index-key": 0,
         "react/jsx-props-no-spreading": 0,
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "prettier/prettier": [
+            "error",
+            // {
+            //     "printWidth": 100,
+            //     "tabWidth": 4,
+            //     "useTabs": false,
+            //     "semi": false,
+            //     "singleQuote": true,
+            //     "quoteProps": "as-needed",
+            //     "jsxSingleQuote": false,
+            //     "trailingComma": "none",
+            //     "bracketSpacing": true,
+            //     "jsxBracketSameLine": false,
+            //     "arrowParens": "always",
+            //     "requirePragma": false,
+            //     "insertPragma": false,
+            //     "proseWrap": "preserve",
+            //     "htmlWhitespaceSensitivity": "css",
+            //     "endOfLine": "lf"
+            // }
+            {
+                "semi": true,
+                "tabWidth": 4,
+                "printWidth": 100,
+                "singleQuote": true,
+                "bracketSpacing": true,
+                "trailingComma": "es5",
+                "jsxBracketSameLine": false,
+                "htmlWhitespaceSensitivity": "css",
+                "endOfLine": "auto"
+            }
+        ]
     }
 }

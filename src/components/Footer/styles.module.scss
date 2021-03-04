@@ -1,6 +1,6 @@
 .container {
     color: white;
-    background-color: $theme-color-dark;
+    background-color: $primary-color-dark;
     font-size: 0.8rem;
     padding-top: 60px;
     @extend .flex-column-center-center;
@@ -12,18 +12,12 @@
     .content {
         @extend .responsive-container;
         @extend .flex-row-start-center;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
 
         .detail {
             @extend .flex-column-start-start;
             flex: 1;
             padding: 0 15px;
-
-            .socialMedia {
-                display: flex;
-                align-items: center;
-                padding: 20px 0;
-            }
 
             .contactInfo {
                 align-items: center;
@@ -34,6 +28,22 @@
                 grid-gap: 20px 5px;
                 height: 30%;
                 width: auto;
+            }
+
+            .socialMedia {
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+
+                .socialIcon {
+                    margin-right: $padding-size;
+                    font-size: 1.2rem;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
             }
         }
     }
