@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useScroll = () => {
     const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -6,10 +6,10 @@ const useScroll = () => {
     const [scrollY, setScrollY] = useState(bodyOffset.top);
     const [scrollX, setScrollX] = useState(bodyOffset.left);
     const [scrollDirection, setScrollDirection] = useState();
-    const [windowSize, setWindowSize] = useState({})
+    const [windowSize, setWindowSize] = useState({});
 
     const listener = (e) => {
-        setWindowSize({height: window.innerHeight, width: window.innerWidth});
+        setWindowSize({ height: window.innerHeight, width: window.innerWidth });
         setBodyOffset(document.body.getBoundingClientRect());
         setScrollY(-bodyOffset.top);
         setScrollX(bodyOffset.left);

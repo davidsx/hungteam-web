@@ -1,0 +1,59 @@
+.contactUs {
+    background-color: #002400;
+    display: flex;
+    gap: 120px;
+
+    .info,
+    .form {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: white;
+    }
+
+    .info {
+        gap: 60px;
+
+        h2 {
+            font-size: 64px;
+
+            span {
+                text-transform: uppercase;
+                -webkit-text-stroke: 5px $primary-color;
+                -webkit-text-fill-color: transparent;
+            }
+
+            img {
+                display: inline-block;
+            }
+        }
+
+        .contact {
+            display: grid;
+            gap: 20px 0;
+            grid-template-columns: 60px 1fr;
+            align-items: center;
+        }
+    }
+
+    .form {
+        padding-top: 30px;
+
+        .instruction {
+            height: 40px;
+            vertical-align: top;
+        }
+
+        input {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            height: 100px;
+            margin-bottom: 20px;
+        }
+    }
+}

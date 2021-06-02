@@ -15,21 +15,17 @@ const SlideShow = () => {
         return () => clearInterval(handleSlideshow);
     }, [photoIndex]);
 
-    return (
-        <>
-            {Sliders.map((s, i) => (
-                <Image
-                    layout="fill"
-                    key={i}
-                    className={classNames(styles.image, {
-                        [styles.active]: s == Sliders[photoIndex],
-                    })}
-                    src={s}
-                    priority
-                />
-            ))}
-        </>
-    );
+    return Sliders.map((s, i) => (
+        <Image
+            layout="fill"
+            key={i}
+            className={classNames(styles.image, {
+                [styles.active]: s == Sliders[photoIndex],
+            })}
+            src={s}
+            priority
+        />
+    ));
 };
 
 export default SlideShow;

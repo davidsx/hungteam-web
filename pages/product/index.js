@@ -2,7 +2,7 @@
 import React, { useCallback, useState } from 'react';
 import { faBars, faThLarge } from '@fortawesome/free-solid-svg-icons';
 
-import Button from 'src/components/Button';
+import Button from 'src/theme/Button';
 import FilterOption from 'src/components/FilterOption';
 import Image from 'next/image';
 import { Jobs } from 'src/config/images';
@@ -48,7 +48,7 @@ const Product = () => {
                 </ul>
             </div>
             <div className={styles.banner}>
-                <span>Need something more?</span>
+                <span>Looking for something else?</span>
                 <Button normal dark>
                     Ask for product
                 </Button>
@@ -77,9 +77,6 @@ const Product = () => {
                                 <Image
                                     src={img}
                                     alt={'MX-AP-020-PH-FRP-01'}
-                                    // width={280}
-                                    // height={220}
-                                    // objectFit="cover"
                                     layout="fill"
                                     objectFit="cover"
                                 />

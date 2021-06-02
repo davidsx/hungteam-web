@@ -1,0 +1,47 @@
+.coorperator {
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            display: flex;
+            gap: 120px;
+            margin-bottom: 60px;
+            flex: 3;
+
+            h3 {
+                flex: 6;
+            }
+
+            p {
+                flex: 8;
+            }
+        }
+
+        .brand {
+            flex: 7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 60px;
+
+            .row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 70px;
+            }
+
+            .next {
+                display: flex;
+                gap: 5px;
+
+                &:hover img {
+                    margin-left: 10px;
+                    transition: 0.2s ease-out;
+                }
+            }
+        }
+    }
+}

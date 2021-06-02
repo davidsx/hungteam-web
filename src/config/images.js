@@ -5,7 +5,11 @@ export const Companies = [
     '/images/company/promat.png',
 ];
 
-export const Memberships = ['/images/membership/FPA.jpg', '/images/membership/HKFPA.jpg', '/images/membership/NFPA.jpg'];
+export const Memberships = [
+    '/images/membership/FPA.jpg',
+    '/images/membership/HKFPA.jpg',
+    '/images/membership/NFPA.jpg',
+];
 
 export const Logos = ['/images/logo/firestar.jpg', '/images/logo/meilux.JPG'];
 
@@ -16,4 +20,9 @@ export const Jobs = [
     '/images/job/HT09-1AH.JPG',
 ];
 
-export const Sliders = ['/images/slider1.png', '/images/slider2.png', '/images/slider3.png', '/images/slider4.png'];
+export const Sliders = [
+    '/images/slider1.png',
+    '/images/slider2.png',
+    '/images/slider3.png',
+    '/images/slider4.png',
+];

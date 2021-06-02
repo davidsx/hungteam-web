@@ -1,0 +1,95 @@
+.container {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    // z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // background-position: center center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // backface-visibility: hidden;
+    // animation: slideshow 12s linear infinite 0s;
+    // animation-timing-function: ease-in-out;
+    // animation-direction: alternate;
+    // background-image: url('/images/slider1.png');
+
+    h2,
+    p {
+        color: white;
+    }
+
+    .form {
+        display: flex;
+        gap: 10px;
+        margin-top: 50px;
+        width: 480px;
+        height: 40px;
+    }
+
+    .photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: opacity 1.5s ease-in-out;
+        opacity: 0;
+        z-index: -1;
+
+        &.active {
+            opacity: 1;
+        }
+
+        .photoDesc {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            text-align: right;
+
+            .place {
+                color: white;
+            }
+
+            .location {
+                color: white;
+            }
+
+            .indexes {
+                margin-top: 15px;
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: rgba(#ffffff, 0.3);
+
+                    &.active {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @keyframes slideshow {
+//     0% {
+//         background-image: url('/images/slider1.png');
+//     }
+//     33% {
+//         background-image: url('/images/slider2.png');
+//     }
+//     66% {
+//         background-image: url('/images/slider3.png');
+//     }
+//     100% {
+//         background-image: url('/images/slider4.png');
+//     }
+// }

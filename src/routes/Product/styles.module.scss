@@ -1,0 +1,116 @@
+.container {
+    .banner {
+        background-color: $primary-color;
+        display: flex;
+        padding: $padding-size 0;
+        margin: $padding-size 0;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-family: 'QuickSand', Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: 500;
+            white-space: nowrap;
+            padding-right: 30px;
+            color: white;
+            // margin-right: auto;
+        }
+    }
+
+    .main {
+        height: calc(100vw / 16 * 9);
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        color: white;
+
+        position: relative;
+        // background
+
+        background-image: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(0, 0, 0, 0.325) 0%,
+                rgba(0, 0, 0, 0.65) 100%
+            ),
+            url('/images/extra-large-door.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // background-position: 0% 55%;
+
+        h2 {
+            font-size: 84px;
+            font-family: $secondary-font-family;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-family: $secondary-font-family;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .content {
+        width: 100vw;
+        display: grid;
+        padding: 15px;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+
+        .product {
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            position: relative;
+
+            background-image: radial-gradient(
+                    50% 50% at 50% 50%,
+                    rgba(0, 0, 0, 0.325) 0%,
+                    rgba(0, 0, 0, 0.65) 100%
+                ),
+                url('/images/extra-large-door.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            // background-position: 0% 55%;
+
+            h2 {
+                font-size: 48px;
+                font-family: $secondary-font-family;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 20px;
+                font-family: $secondary-font-family;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
